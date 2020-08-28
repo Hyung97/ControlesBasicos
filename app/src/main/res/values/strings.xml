@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">ControlesBasicos</string>
-    <string-array name= "operaciones">
-        <item>Seleccione un elemento</item>
-        <item>Suma</item>
-        <item>Resta</item>
-        <item>Multiplicación</item>
-        <item>División</item>
-        <item>Porcentaje</item>
-        <item>Exponenciación</item>
-        <item>Modulo</item>
-        <item>Factoreo</item>
+    <string-array name="deptos">
+        <item>Seleccione un depto</item>
+        <item>Usulutan</item>
+        <item>San Miguel</item>
+        <item>La Union</item>
+        <item>Morazan</item>
     </string-array>
 </resources>
