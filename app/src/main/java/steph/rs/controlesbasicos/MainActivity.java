@@ -2,98 +2,76 @@ package steph.rs.controlesbasicos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    SensorManager sensorManager;
+    Sensor sensor;
+    SensorEventListener sensorEventListener;
+
+    @Override
+    protected void onPause() {
+        detener();
+        super.onPause();
+    }
+    @Override
+    protected void onResume() {
+        iniciar();
+        super.onResume();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    public void calcular(View view) {
-        try {
-            RadioGroup optOperaciones = (RadioGroup) findViewById(R.id.optOperaciones);
-            Spinner cboOperaciones = (Spinner) findViewById(R.id.cboOperaciones);
-
-            TextView tempval = (TextView) findViewById(R.id.txtNum1);
-            double num1 = Double.parseDouble(tempval.getText().toString());
-
-            tempval = (TextView) findViewById(R.id.txtNum2);
-            double num2 = Double.parseDouble(tempval.getText().toString());
-
-            double respuesta = 0;
-            //Este es para el RadioGroup y los RadioButtons
-            switch (optOperaciones.getCheckedRadioButtonId()) {
-                case R.id.optSuma:
-                    respuesta = num1 + num2;
-                    break;
-                case R.id.optResta:
-                    respuesta = num1 - num2;
-                    break;
-                case R.id.optMultiplicacion:
-                    respuesta = num1 * num2;
-                    break;
-                case R.id.optDivision:
-                    respuesta = num1 / num2;
-                    break;
-                case R.id.optPorcentaje:
-                    respuesta = (num1/num2)*num1;
-                    break;
-                case R.id.optExponenciacion:
-                    respuesta = Math.pow(num1, num2);
-                    break;
-                case R.id.optModulo:
-                    respuesta = num1%num2;
-                    break;
-                case R.id.optFactoreo:
-                    long factorial= 3;
-                    respuesta = num1*(num1+1)*(Math.pow(num2,2)-factorial);
-                    break;
-
+        sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        if(sensor==null){
+            finish();
         }
-            //Este es para el Spinner... -> ComboBox.
-            switch (cboOperaciones.getSelectedItemPosition()){
-                case 1: //suma
-                    respuesta = num1 + num2;
-                    break;
-                case 2: //resta
-                    respuesta = num1 - num2;
-                    break;
-                case 3: //multiplicacion
-                    respuesta = num1 * num2;
-                    break;
-                case 4: //division
-                    respuesta = num1 / num2;
-                    break;
-                case 5: //porcentaje
-                    respuesta = (num1/num2)*num1;
-                    break;
-                case 6: //exponenciacion
-                    respuesta = Math.pow(num1, num2);
-                    break;
-                case 7: //modulo
-                    respuesta = num1%num2;
-                    break;
-                case 8: //factoreo
-                    long factorial = 3;
-                    respuesta = num1*(num1+1)*(Math.pow(num2,2)-factorial);
-                    break;
+        final TextView lblSensorProximidad = (TextView)findViewById(R.id.lblSensorProximidad);
+        sensorEventListener = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent sensorEvent) {
+                if( sensorEvent.values[0]>=0 && sensorEvent.values[0]<=4 ){
+                    getWindow().getDecorView().setBackgroundColor(Color.RED);
+                    lblSensorProximidad.setText("LEJOS: "+ sensorEvent.values[0]);
+                } else if(sensorEvent.values[0]>4 && sensorEvent.values[0]<=8 ){
+                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                    lblSensorProximidad.setText("INTERMEDIO: "+ sensorEvent.values[0]);
+                } else{
+                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
+                    lblSensorProximidad.setText("CERCA: "+ sensorEvent.values[0]);
+                }
             }
-            tempval = (TextView) findViewById(R.id.lblRespuesta);
-            tempval.setText("Respuesta: " + respuesta);
-        }catch (Exception err){
-            TextView temp = (TextView) findViewById(R.id.lblRespuesta);
-            temp.setText("POR FAVOR INGRESAR LOS NÚMEROS CORRESPONDIENTES.");
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int i) {
 
-           Toast.makeText(getApplicationContext(),"POR FAVOR INGRESAR LOS NÚMEROS.",Toast.LENGTH_LONG).show();
-        }
+            }
+        };
+        iniciar();
+    }
+    void iniciar(){
+        sensorManager.registerListener(sensorEventListener, sensor, 2000*1000);
+    }
+    void detener(){
+        sensorManager.unregisterListener(sensorEventListener);
+
 
     }
-}
+    }
