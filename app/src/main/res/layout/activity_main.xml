@@ -8,12 +8,13 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/lblSensorLuz"
+        android:id="@+id/lblSensorProximidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="100dp"
-        android:text="Sensor de Luz"
+        android:text="Sensor de Proximidad"
         android:textColor="@color/colorPrimary"/>
+
 
 </RelativeLayout>
