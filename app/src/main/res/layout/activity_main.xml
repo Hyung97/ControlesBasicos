@@ -4,92 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
-    <TabHost
-        android:id="@+id/tbhDirecciones"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginLeft="15dp"
+        android:layout_width="600dp"
+        android:layout_height="190dp"
+        app:srcCompat="@drawable/Logovtow" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/btnProductos"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/Product"
+        android:onClick="Productos" />
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnClientes"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="315dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/clientes"
+        android:gravity="center"
+        android:onClick="Clientes" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btnVentas"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="455dp"
+        android:background="@drawable/Ventas"
+        android:onClick="Ventas" />
 
-                <RelativeLayout
-                    android:id="@+id/tabPais"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <Spinner
-                        android:id="@+id/spnPaises"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginLeft="80dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <Button
-                        android:id="@+id/btnObtenerPais"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="120dp"
-                        android:layout_marginTop="180dp"
-                        android:text="Obtener Pais"/>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/tabDireccion"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/lblDepto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="Depto:"
-                        />
-
-                    <TextView
-                        android:id="@+id/lblMun"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="Mun:"
-                        />
-
-                    <Spinner
-                        android:id="@+id/spnDepto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="80dp"
-                        android:entries="@array/deptos"
-                        />
-                    <Spinner
-                        android:id="@+id/spnMun"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginLeft="80dp" />
-                </RelativeLayout>
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+    <Button
+        android:id="@+id/btnHistorial"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="595dp"
+        android:background="@drawable/Historial"
+        android:onClick="Historial" />
 
 </RelativeLayout>

@@ -1,10 +1,21 @@
 <resources>
     <string name="app_name">ControlesBasicos</string>
-    <string-array name="deptos">
-        <item>Seleccione un depto</item>
-        <item>Usulutan</item>
-        <item>San Miguel</item>
-        <item>La Union</item>
-        <item>Morazan</item>
-    </string-array>
+    <string name="Busqueda">Buscar Producto</string>
+    <string name="ItemProducto">Nombre del Producto</string>
+    <string name="ItemPrecio">Precio</string>
+    <string name="ItenZero">0.0</string>
+    <string name="BusquedaClientes">Buscar cliente</string>
+    <string name="Name">Nombre</string>
+    <string name="Number">Número de Contacto</string>
+    <string name="Email">Email</string>
+    <string name="Address">Dirección</string>
+    <string name="Obser">Observaciones</string>
+    <string name="TotalMoney">Total</string>
+    <string name="Cant">Cantidad</string>
+    <string name="Money">Precio</string>
+    <string name="MoneyZero">0</string>
+    <string name="Date">Fecha</string>
+    <string name="Hour">Hora</string>
+    <string name="Time">08:00</string>
+    <string name="Anual">2018-09-22</string>
 </resources>
