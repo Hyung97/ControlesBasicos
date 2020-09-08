@@ -14,8 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Productos"></activity>
-        <activity android:name=".Activitys.Productos" />
-        <activity android:name=".dirreciones_paises" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

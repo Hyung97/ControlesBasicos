@@ -2,6 +2,7 @@ package steph.rs.controlesbasicos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Productos(View view) {
-
+        Intent producto = new Intent(this, Productos.class);
+        startActivity(producto);
     }
 
     public void Historial(View view) {
