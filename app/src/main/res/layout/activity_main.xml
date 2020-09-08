@@ -12,7 +12,7 @@
         android:layout_marginLeft="15dp"
         android:layout_width="600dp"
         android:layout_height="190dp"
-        app:srcCompat="@drawable/Logovtow" />
+        app:srcCompat="@drawable/logovtow" />
 
     <Button
         android:id="@+id/btnProductos"
@@ -22,7 +22,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="175dp"
-        android:background="@drawable/Product"
+        android:background="@drawable/product"
         android:onClick="Productos" />
 
     <Button
@@ -44,7 +44,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="455dp"
-        android:background="@drawable/Ventas"
+        android:background="@drawable/venticas"
         android:onClick="Ventas" />
 
     <Button
@@ -55,7 +55,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="595dp"
-        android:background="@drawable/Historial"
+        android:background="@drawable/history"
         android:onClick="Historial" />
 
 </RelativeLayout>

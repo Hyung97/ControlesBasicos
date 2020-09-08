@@ -12,5 +12,8 @@
     <color name="Green"> #2e7d32</color>
     <color name="Blue">#3f51b5 </color>
     <color name="Mentha">#03FD61 </color>
-
+    <color name="DarkGreen">#0B3B17 </color>
+    <color name="Gris">#848484</color>
+    <color name="Amarillo">#FFFF00</color>
+    <color name="GG">#088A08</color>
 </resources>

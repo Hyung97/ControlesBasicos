@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">ControlesBasicos</string>
+    <string name="app_name">PinguiStore</string>
     <string name="Busqueda">Buscar Producto</string>
     <string name="ItemProducto">Nombre del Producto</string>
     <string name="ItemPrecio">Precio</string>
     <string name="ItenZero">0.0</string>
-    <string name="BusquedaClientes">Buscar cliente</string>
+    <string name="BusquedaClientes">Buscar Cliente</string>
     <string name="Name">Nombre</string>
     <string name="Number">Número de Contacto</string>
     <string name="Email">Email</string>

@@ -29,11 +29,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Historial(View view) {
+        Intent historial = new Intent(this, Historial.class);
+        startActivity(historial);
     }
 
     public void Ventas(View view) {
+        Intent ventas = new Intent(this, Ventas.class);
+        startActivity(ventas);
     }
 
     public void Clientes(View view) {
+        Intent clientes = new Intent(this, Clientes.class);
+        startActivity(clientes);
     }
 }
