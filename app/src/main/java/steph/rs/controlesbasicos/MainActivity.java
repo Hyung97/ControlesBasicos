@@ -22,7 +22,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 String dNombre = rNombre.getText().toString();
-
                 Bundle parametro = new Bundle();
                 parametro.putString("dNombre", dNombre);
 
