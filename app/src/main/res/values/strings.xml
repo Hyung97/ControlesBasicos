@@ -1,14 +1,11 @@
 <resources>
-    <string name="app_name">ControlesBasicos</string>
-    <string-array name= "operaciones">
-        <item>Seleccione un elemento</item>
-        <item>Suma</item>
-        <item>Resta</item>
-        <item>Multiplicación</item>
-        <item>División</item>
-        <item>Porcentaje</item>
-        <item>Exponenciación</item>
-        <item>Modulo</item>
-        <item>Factoreo</item>
-    </string-array>
+    <string name="app_name">Agenda</string>
+    <string name="Contacto">Contacto</string>
+    <string name="Correo">Correo</string>
+    <string name="Mensaje">Mensaje</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragContacto">C O N T A C T O S </string>
+    <string name="fragCorreo">C O R R E O S</string>
+    <string name="fragMensajes">M E N S A J E S</string>
 </resources>
