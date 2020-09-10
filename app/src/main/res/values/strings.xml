@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">E N V I O  D E  D A T O S</string>
-    <string name="Nombre">ESCRIBA SU NOMBRE</string>
-    <string name="Enviar">ENVIAR DATOS</string>
-    <string name="MostrarDatos">DATOS RECIBIDOS</string>
-    <string name="Volver">VOLVER</string>
+    <string name="app_name">Reproductor de Música</string>
+    <string name="Start">INICIAR</string>
+    <string name="Stop">DETENER</string>
 </resources>

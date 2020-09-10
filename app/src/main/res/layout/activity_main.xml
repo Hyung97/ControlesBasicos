@@ -8,23 +8,36 @@
     android:background="@android:color/background_light"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/Nombre"
-        android:textStyle="italic"
-        android:layout_marginTop="190dp"/>
-
+    <ImageView
+        android:id="@+id/ivPortada"
+        android:layout_width="413dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="41dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wallmusic" />
     <Button
-        android:id="@+id/btEnviar"
+        android:id="@+id/btIniciar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Enviar"
-        android:textStyle="bold"
-        android:layout_marginTop="350dp"
-        android:onClick="RecibirDate"/>
+        android:layout_marginTop="32dp"
+        android:text="@string/Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPortada" />
+    <Button
+        android:id="@+id/btDetener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btIniciar" />
 
 
 </LinearLayout>
