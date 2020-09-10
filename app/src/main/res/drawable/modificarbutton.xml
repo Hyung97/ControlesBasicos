@@ -6,7 +6,7 @@
         </shape>
     </item>
     <item
-        android:drawable="@drawable/iconoguardar"
+        android:drawable="@drawable/edit"
         android:bottom="20dp"
         android:top="20dp"
         android:right="20dp"
