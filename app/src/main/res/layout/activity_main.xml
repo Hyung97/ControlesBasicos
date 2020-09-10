@@ -1,43 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/background_light"
+    android:background="#482b24"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/ivPortada"
-        android:layout_width="413dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="41dp"
+        android:id="@+id/imageView"
+        android:layout_width="381dp"
+        android:layout_height="376dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wallmusic" />
+        app:srcCompat="@drawable/portada1" />
     <Button
-        android:id="@+id/btIniciar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/Start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:id="@+id/btnPlay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="410dp"
+        android:background="@drawable/play"
+        android:onClick="PLayPause"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPortada" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="28dp" />
     <Button
-        android:id="@+id/btDetener"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/Stop"
+        android:id="@+id/btnStop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="410dp"
+        android:background="@drawable/pausa"
+        android:onClick="Stop"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="24dp" />
+    <Button
+        android:id="@+id/btnRepeat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="410dp"
+        android:background="@drawable/repetir"
+        android:onClick="Repetir"
+        app:layout_constraintStart_toEndOf="@+id/btnStop"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="28dp" />
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="410dp"
+        android:background="@drawable/anterior"
+        android:onClick="Anterior"
+        app:layout_constraintStart_toEndOf="@+id/btnRepeat"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp" />
+    <Button
+        android:id="@+id/btnFollowing"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="410dp"
+        android:background="@drawable/proximo"
+        android:onClick="Siguiente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btIniciar" />
+        app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
