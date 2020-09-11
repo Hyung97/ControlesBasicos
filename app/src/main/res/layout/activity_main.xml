@@ -25,37 +25,4 @@
         android:background="@drawable/product"
         android:onClick="Productos" />
 
-    <Button
-        android:id="@+id/btnClientes"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="315dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/clientes"
-        android:gravity="center"
-        android:onClick="Clientes" />
-
-    <Button
-        android:id="@+id/btnVentas"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:gravity="center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="455dp"
-        android:background="@drawable/venticas"
-        android:onClick="Ventas" />
-
-    <Button
-        android:id="@+id/btnHistorial"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:gravity="center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="595dp"
-        android:background="@drawable/history"
-        android:onClick="Historial" />
-
 </RelativeLayout>

@@ -20,26 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     public void Productos(View view) {
         Intent producto = new Intent(this, Productos.class);
         startActivity(producto);
-    }
-
-    public void Historial(View view) {
-        Intent historial = new Intent(this, Historial.class);
-        startActivity(historial);
-    }
-
-    public void Ventas(View view) {
-        Intent ventas = new Intent(this, Ventas.class);
-        startActivity(ventas);
-    }
-
-    public void Clientes(View view) {
-        Intent clientes = new Intent(this, Clientes.class);
-        startActivity(clientes);
     }
 }
