@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class ConexionSqlite extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "venta_simple";
+    private static final String DATABASE_NAME = "TIENDA";
 
     public ConexionSqlite(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
