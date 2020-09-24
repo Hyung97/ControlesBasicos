@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".Productos"
-    android:background="@drawable/fondidi">
+    android:background="#ffff">
 
     <TextView
         android:id="@+id/txt"
@@ -79,7 +79,14 @@
         android:layout_height="60dp"
         android:layout_below="@+id/precio"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:onClick="saveInfo"/>
+        android:layout_marginTop="60dp"/>
+
+    <Button
+        android:id="@+id/btnMostrarAmigos"
+        android:layout_below="@+id/apdBAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Mostrar Productos"/>
 
 </RelativeLayout>

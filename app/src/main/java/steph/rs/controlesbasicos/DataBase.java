@@ -25,24 +25,24 @@ public class DataBase extends SQLiteOpenHelper {
 
     }
 
-    public void eliminarProducto (String id){
-        SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("delete from productos where idProducto ='"+ id +"'");
-    }
-
-    public Cursor consultarProductos (){
-        String sql = "select * from productos order by producto asc";
-        SQLiteDatabase db  = getReadableDatabase();
-        Cursor c = db.rawQuery(sql, null);
-        return c;
-    }
-
-    public void guardarProducto(String prod, String precio, String descrip, String marc, String id, String accion) {
-        SQLiteDatabase db = getWritableDatabase();
-        if (accion.equals("modificar")) {
-            db.execSQL("UPDATE PRODUCTOS SET PRODUCTOS ='" + prod + "', marca='" + marc + "', descripcion='" + descrip + ", 'precio='" + precio + "'where idProducto = '" + id + "'");
-        }else{
-            db.execSQL("insert into productos (producto, marca, descripcion, precio) values ('" + prod + "','" + marc + "','" + descrip + "','" + precio + "')");
+    public Cursor mantenimientoProductos(String accion, String[] data){
+        SQLiteDatabase sqLiteDatabaseReadable = getReadableDatabase();
+        SQLiteDatabase sqLiteDatabaseWritable=getWritableDatabase();
+        Cursor cursor = null;
+        switch (accion){
+            case "consultar":
+                cursor=sqLiteDatabaseReadable.rawQuery("SELECT * FROM Productos ORDER BY producto ASC", null);
+                break;
+            case "nuevo":
+                sqLiteDatabaseWritable.execSQL("INSERT INTO Productos (producto, marca, descripcion, precio) VALUES('"+ data[1] +"','"+data[2]+"','"+data[3]+"','"+data[4]+"')");
+                break;
+            case "modificar":
+                sqLiteDatabaseWritable.execSQL("UPDATE Productos SET producto='"+ data[1] +"',marca='"+data[2]+"',descripcion='"+data[3]+"',producto='"+data[4]+"' WHERE idProducto='"+data[0]+"'");
+                break;
+            case "eliminar":
+                sqLiteDatabaseWritable.execSQL("DELETE FROM Productos WHERE idProducto='"+ data[0] +"'");
+                break;
         }
+        return cursor;
     }
 }
