@@ -17,25 +17,17 @@
         android:textSize="40dp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="16dp" />
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="225dp"
-        android:layout_height="225dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/txt"
-        android:padding="2dp"
-        android:src="@drawable/producto" />
+        android:layout_marginTop="5dp" />
 
     <EditText
         android:id="@+id/producto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
+        android:layout_below="@+id/txt"
         android:hint="@string/ItemProducto"
         android:inputType="textPersonName|textCapWords"
         android:padding="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background"/>
 
     <EditText
@@ -71,22 +63,23 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/background"/>
 
+    <ImageView
+        android:id="@+id/imgFotoAmigo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/precio"
+        android:padding="2dp"
+        android:layout_marginTop="25dp"/>
+
     <Button
-        android:id="@+id/apdBAgregar"
+        android:id="@+id/apdBAgregarProducto"
         android:layout_margin="10dp"
         android:background="@drawable/addbutton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/precio"
+        android:layout_below="@+id/imgFotoAmigo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"/>
-
-    <Button
-        android:id="@+id/btnMostrarAmigos"
-        android:layout_below="@+id/apdBAgregar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Mostrar Productos"/>
 
 </RelativeLayout>
