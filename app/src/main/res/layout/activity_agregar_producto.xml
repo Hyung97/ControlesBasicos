@@ -6,24 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".agregar_producto">
 
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/naranjatropical">
 
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:src="@drawable/caja_producto"
-            android:id="@+id/apdIvImagenProducto"
-            android:layout_width="180dp"
-            android:layout_height="160dp" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/apdIvImagenProducto"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/caja_producto" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P R O D U C T O S"
+        android:layout_marginTop="33dp"
+        android:textSize="35dp"
+        android:layout_marginLeft="100dp"/>
+
     <EditText
         android:id="@+id/producto"
+        android:layout_below="@+id/apdIvImagenProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/ItemProducto"
@@ -66,14 +69,27 @@
         android:background="@drawable/background"/>
 
     <Button
-        android:id="@+id/apdBAgregarProducto"
+        android:id="@+id/btnAgregarProducto"
         android:layout_margin="10dp"
-        android:background="@drawable/addbutton"
+        android:background="@drawable/iconguardar"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/descripcion"
+        android:layout_below="@+id/precio"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"/>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/btnMostarProducto"
+        android:layout_margin="10dp"
+        android:background="@drawable/mostar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btnAgregarProducto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"/>
+
+
+
+
 
 </RelativeLayout>
