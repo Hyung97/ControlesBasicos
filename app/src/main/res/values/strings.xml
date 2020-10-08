@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Tienda CouchDB</string>
-    <string name="nombre_producto">Producto</string>
-    <string name="buscar_producto">Buscar producto</string>
-    <string name="nombre_item_producto">Nombre del producto</string>
-    <string name="precio_item">Precio</string>
-    <string name="precio_item_cero">0.0</string>
+    <string name="Busqueda">Buscar Producto</string>
+    <string name="ItemProducto">Nombre del Producto</string>
+    <string name="ItemPrecio">Precio</string>
+    <string name="ItenZero">0.0</string>
+    <string name="Marca">Marca</string>
+    <string name="Descripcion">Descripción</string>
 </resources>
