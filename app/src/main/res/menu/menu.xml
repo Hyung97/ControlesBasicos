@@ -2,17 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item
     android:id="@+id/mxnAgregar"
-    android:icon="@drawable/agregar"
     android:title="Agregar" />
 
     <item
         android:id="@+id/mxnModificar"
-        android:icon="@drawable/iconoModificar"
         android:title="Modificar" />
 
     <item
         android:id="@+id/mxnEliminar"
-        android:icon="@drawable/btnEliminar"
         android:title="Eliminar" />
 
 
