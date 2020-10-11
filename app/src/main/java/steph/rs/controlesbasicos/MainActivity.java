@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.mxnAgregar:
-                agregarNuevoProducto("NUEVO", jsonObject);
+                agregarNuevoProducto("nuevo", jsonObject);
                 return true;
             case R.id.mxnModificar:
                 try {
-                    agregarNuevoProducto("MODIFICAR", datosJSON.getJSONObject(positionn));
+                    agregarNuevoProducto("modificar", datosJSON.getJSONObject(positionn));
                 }catch (Exception ex){}
                 return true;
             case R.id.mxnEliminar:
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(Void... voids) {
             StringBuilder result = new StringBuilder();
             try {
-                URL url = new URL("http://192.168.1.7:5984/db_agenda/");
+                URL url = new URL("http://192.168.0.20:5984/db_tiendita/_design/tiendita/_view/la-tiendita");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
             StringBuilder stringBuilder = new StringBuilder();
             String jsonResponse = null;
             try {
-                URL url = new URL("" +
+                URL url = new URL("http://192.168.0.20:5984/db_tiendita/" +
                         datosJSON.getJSONObject(positionn).getJSONObject("value").getString("_id") + "?rev=" +
                         datosJSON.getJSONObject(positionn).getJSONObject("value").getString("_rev"));
                 urlConnection = (HttpURLConnection) url.openConnection();
