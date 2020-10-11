@@ -1,14 +1,9 @@
 <resources>
-    <string name="app_name">ControlesBasicos</string>
-    <string-array name= "operaciones">
-        <item>Seleccione un elemento</item>
-        <item>Suma</item>
-        <item>Resta</item>
-        <item>Multiplicación</item>
-        <item>División</item>
-        <item>Porcentaje</item>
-        <item>Exponenciación</item>
-        <item>Modulo</item>
-        <item>Factoreo</item>
-    </string-array>
+    <string name="app_name">Tienda CouchDB</string>
+    <string name="Busqueda">Buscar Producto</string>
+    <string name="ItemProducto">Nombre del Producto</string>
+    <string name="ItemPrecio">Precio</string>
+    <string name="ItenZero">0.0</string>
+    <string name="Marca">Marca</string>
+    <string name="Descripcion">Descripción</string>
 </resources>
