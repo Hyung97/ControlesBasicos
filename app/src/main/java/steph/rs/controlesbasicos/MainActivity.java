@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 }catch (Exception ex){}
                 return true;
             case R.id.mxnEliminar:
-                AlertDialog eliminarPrdt =  eliminarPrdt();
-                eliminarPrdt.show();
+                AlertDialog eliminarProducto =  eliminarPrdt();
+                eliminarProducto.show();
                 return true;
             default:
                 return super.onContextItemSelected(item);
