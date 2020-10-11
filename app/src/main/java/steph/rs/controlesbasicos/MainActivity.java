@@ -226,12 +226,12 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder confirmacion = new AlertDialog.Builder(MainActivity.this);
         try {
             confirmacion.setTitle(datosJSON.getJSONObject(positionn).getJSONObject("value").getString("producto"));
-            confirmacion.setMessage("¿ESTÁS SEGURO DE ELIMINAR EL PRODUCTO?");
+            confirmacion.setMessage("¿ESTÁ SEGURO DE ELIMINAR ESTE REGISTRO?");
             confirmacion.setPositiveButton("Si", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    eliminarDatosProductos objEliminar = new eliminarDatosProductos();
-                    objEliminar.execute();
+                    eliminarDatosProductos objEliminarAmigo = new eliminarDatosProductos();
+                    objEliminarAmigo.execute();
                     Toast.makeText(getApplicationContext(), "PRODUCTO ELIMINADO CON ÉXITO.", Toast.LENGTH_SHORT).show();
                     dialogInterface.dismiss();
                 }
@@ -239,12 +239,12 @@ public class MainActivity extends AppCompatActivity {
             confirmacion.setNegativeButton("No", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    Toast.makeText(getApplicationContext(), "ELIMINACION DEL PRODUCTO CANCELADA.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "ELIMINACION CANCELADA.", Toast.LENGTH_SHORT).show();
                     dialogInterface.dismiss();
                 }
             });
         }catch (Exception ex){
-            Toast.makeText(getApplicationContext(), "ERROR AL MOSTRAR "+ ex.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "ERROR AL MOSTRADO DE LA CONFIRMACION: "+ ex.getMessage(), Toast.LENGTH_LONG).show();
         }
         return confirmacion.create();
     }
