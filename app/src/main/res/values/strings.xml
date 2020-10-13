@@ -1,14 +1,4 @@
 <resources>
-    <string name="app_name">ControlesBasicos</string>
-    <string-array name= "operaciones">
-        <item>Seleccione un elemento</item>
-        <item>Suma</item>
-        <item>Resta</item>
-        <item>Multiplicación</item>
-        <item>División</item>
-        <item>Porcentaje</item>
-        <item>Exponenciación</item>
-        <item>Modulo</item>
-        <item>Factoreo</item>
-    </string-array>
+    <string name="app_name">Little Penguin </string>
+
 </resources>
