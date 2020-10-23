@@ -3,4 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="IndigoTono1">#9fa8da</color>
+    <color name="IndigoTono2">#6f79a8</color>
+    <color name="AzulTono1">#64b5f6</color>
+    <color name="AzulTono2">#2286c3</color>
+    <color name="NaranjaTono1">#ff9800</color>
+    <color name="NaranjaTono2">#ffc947</color>
+    <color name="blanco">#ffffff</color>
 </resources>

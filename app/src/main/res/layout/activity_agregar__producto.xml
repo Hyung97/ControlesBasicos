@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Agregar_Producto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/NaranjaTono1"
+            android:layout_width="match_parent"
+            android:layout_height="185dp">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/orden"
+                    android:id="@+id/imgFoto"
+                    android:layout_width="180dp"
+                    android:layout_height="160dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt"
+            android:hint="Código"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"/>
+        <EditText
+            android:id="@+id/producto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt"
+                android:hint="Producto"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"/>
+
+        <EditText
+            android:id="@+id/marca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/producto"
+            android:hint="Marca"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"/>
+
+        <EditText
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/marca"
+            android:hint="Descripción"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background" />
+
+        <EditText
+            android:id="@+id/presentacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descripcion"
+            android:hint="Presentación"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"/>
+
+        <EditText
+            android:id="@+id/precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/presentacion"
+            android:hint="Precio"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"/>
+
+        <Button
+            android:id="@+id/apdBAgregarProducto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/precio"
+            android:layout_margin="10dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:background="@drawable/btnagregar" />
+    </LinearLayout>
+
+</RelativeLayout>
+
