@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <provider
-            android:authorities="steph.rs.controlesbasicosr"
+            android:authorities="steph.rs.controlesbasicos"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
