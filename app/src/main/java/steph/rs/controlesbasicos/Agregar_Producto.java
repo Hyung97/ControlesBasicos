@@ -60,16 +60,22 @@ public class Agregar_Producto extends AppCompatActivity {
                 TextView tempVal = (TextView)findViewById(R.id.producto);
                 tempVal.setText(data[1]);
 
-                tempVal = (TextView)findViewById(R.id.marca);
+                tempVal  = (TextView)findViewById(R.id.producto);
                 tempVal.setText(data[2]);
 
-                tempVal = (TextView)findViewById(R.id.descripcion);
+                tempVal = (TextView)findViewById(R.id.marca);
                 tempVal.setText(data[3]);
 
-                tempVal = (TextView)findViewById(R.id.precio);
+                tempVal = (TextView)findViewById(R.id.descripcion);
                 tempVal.setText(data[4]);
 
-                urlCompletaImg = data[5];
+                tempVal = (TextView)findViewById(R.id.presentacion);
+                tempVal.setText(data[5]);
+
+                tempVal = (TextView)findViewById(R.id.precio);
+                tempVal.setText(data[6]);
+
+                urlCompletaImg = data[7];
                 Bitmap imageBitmap = BitmapFactory.decodeFile(urlCompletaImg);
                 imgFoto.setImageBitmap(imageBitmap);
             }
@@ -86,16 +92,22 @@ public class Agregar_Producto extends AppCompatActivity {
                 TextView tempVal = findViewById(R.id.producto);
                 String producto= tempVal.getText().toString();
 
+                tempVal = findViewById(R.id.codigo);
+                String codigo = tempVal.getText().toString();
+
                 tempVal = findViewById(R.id.marca);
                 String marca = tempVal.getText().toString();
 
                 tempVal = findViewById(R.id.descripcion);
                 String descripcion = tempVal.getText().toString();
 
+                tempVal = findViewById(R.id.presentacion);
+                String presentacion = tempVal.getText().toString();
+
                 tempVal = findViewById(R.id.precio);
                 String precio = tempVal.getText().toString();
 
-                String[] data = {id,producto,marca,descripcion,precio,urlCompletaImg};
+                String[] data = {id,producto,codigo,marca,descripcion,presentacion,precio,urlCompletaImg};
 
                 productos = new DataBase(getApplicationContext(),"", null, 1);
                 productos.mantenimientoProductos(accion, data);

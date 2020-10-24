@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -26,12 +25,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.ArrayList;
 
-import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     DataBase db;
@@ -72,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     } else {//hacemos la busqueda
                         for (prod pr : copyStringArrayList) {
                             String producto = pr.getProducto();
+                            String codigo = pr.getCodigo();
+                            String marca = pr.getMarca();
                             if (producto.toLowerCase().contains(tempVal.getText().toString().trim().toLowerCase())) {
                                 stringArrayList.add(pr);
                             }
@@ -109,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.mnxModificar:
-                String[] dataAmigo = {
+                String[] dataProd = {
                         c.getString(0),//id
                         c.getString(1),//producto
                         c.getString(2),//codigo
@@ -119,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                         c.getString(6), //precio
                         c.getString(7)  //urlImg
                 };
-                agregar("modificar",dataAmigo);
+                agregar("modificar",dataProd);
                 return true;
 
             case R.id.mnxEliminar:
@@ -175,9 +173,8 @@ public class MainActivity extends AppCompatActivity {
         }while(c.moveToNext());
         AdapterImage adaptadorImg = new AdapterImage(getApplicationContext(), stringArrayList);
         ltsProductos.setAdapter(adaptadorImg);
-
-        copyStringArrayList.clear();//limpiamos la lista de amigos
-        copyStringArrayList.addAll(stringArrayList);//creamos la copia de la lista de amigos...
+        copyStringArrayList.clear();//limpiamos la lista de los productos
+        copyStringArrayList.addAll(stringArrayList);//creamos la copia de la lista...
         registerForContextMenu(ltsProductos);
     }
     void agregar(String accion, String[] dataProducto) {
@@ -228,12 +225,12 @@ class prod {
     }
 
 
-    public String getCodigo() {
-        return codigo;
-    }
-    public void setCodigo(String codigo) {
-        this.producto = codigo;
-    }
+   public  String getCodigo(){
+        return  codigo;
+   }
+   public void setCodigo(String codigo){
+        this. codigo= codigo;
+   }
 
 
     public String getMarca() {

@@ -21,7 +21,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:src="@drawable/orden"
                     android:id="@+id/imgFoto"
                     android:layout_width="180dp"
                     android:layout_height="160dp" />
