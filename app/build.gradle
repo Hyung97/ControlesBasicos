@@ -29,14 +29,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    //Gson
-    implementation 'com.google.code.gson:gson:2.8.5'
-    //butterKnife
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    //Piccaso
-    implementation 'com.squareup.picasso:picasso:2.71828'
-    //circleImage
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
 }
